@@ -374,3 +374,15 @@ bool  operator==( N3Matrix& M1 , N3Matrix& M2 ){
 bool operator!=( N3Matrix& M1 , N3Matrix& M2 ){
   return !(M1==M2);
 }
+
+N3Matrix cpmat( N3Matrix vec ){
+  N3Matrix RET(3,3);
+  double x , y , z;
+  x = vec.get(0,0);
+  y = vec.get(1,0);
+  z = vec.get(2,0);
+  RET << 0 << z << -y
+      << -z << 0 << x
+      << y << -x << 0;
+  return RET;
+}

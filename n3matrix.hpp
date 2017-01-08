@@ -67,5 +67,6 @@ bool     operator!=( N3Matrix& , N3Matrix& );
 N3Matrix operator*( double , N3Matrix );
 N3Matrix operator/( N3Matrix , double );
 N3Matrix operator+( N3Matrix );
+N3Matrix cpmat( N3Matrix );
 
 #endif
