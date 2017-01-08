@@ -24,6 +24,7 @@ public:
   const static double RANK_NORM_EPS=1e-13;
   N3Matrix();
   N3Matrix( int , int );
+  void   allocate( int , int );
   int    size( char );
   void   set( int , int , double );
   double get( int , int );

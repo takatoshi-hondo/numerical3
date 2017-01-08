@@ -11,6 +11,13 @@ N3Matrix::N3Matrix( int aR , int aC ){
   ptr = 0;
 }
 
+void N3Matrix::allocate( int aR , int aC ){
+  R = aR;
+  C = aC;
+  elem.allocate( R*C );
+  ptr = 0;
+}
+
 int N3Matrix::c2s( int r , int c ){
   int snum;
   snum = r*C + c;
